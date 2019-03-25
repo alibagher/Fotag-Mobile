@@ -17,17 +17,18 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <RatingBar
-        android:id="@+id/ratingBar2"
+        android:id="@+id/mainRating"
         android:layout_width="241dp"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="8dp"
         android:numStars="5"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="0dp" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/reload"
         android:layout_width="62dp"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
@@ -35,17 +36,36 @@
         android:tint="@color/colorAccent"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/stat_notify_sync" />
+        app:srcCompat="@android:drawable/stat_notify_sync"
+        android:onClick="loadImg"/>
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/remove"
         android:layout_width="60dp"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginStart="8dp"
         android:background="@color/colorPrimary"
         android:tint="@color/colorAccent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toEndOf="@+id/reload"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:layout_editor_absoluteY="0dp"
+        android:onClick="clearImg"/>
+
+    <GridView
+        android:id="@+id/gridAnimal"
+        android:layout_width="match_parent"
+        android:layout_height="617dp"
+
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="8dp"
+        android:columnWidth="100dp"
+        android:numColumns="1"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+
 
 </android.support.constraint.ConstraintLayout>
